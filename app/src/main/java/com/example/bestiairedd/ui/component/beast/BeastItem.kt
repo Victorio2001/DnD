@@ -28,7 +28,6 @@ fun BeastItem(
     onClick: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
-
     Card(
         onClick = onClick,
         modifier = modifier
@@ -42,14 +41,14 @@ fun BeastItem(
             modifier = Modifier.fillMaxWidth()
         ) {
 
-            AsyncImage(
+            /*AsyncImage(
                 model = "https://www.dnd5eapi.co" + beast.url,
                 contentDescription = "Poster of ${beast.name}",
                 modifier = Modifier
                     .fillMaxWidth()
                     .aspectRatio(0.666f),
                 placeholder = rememberAsyncImagePainter("https://via.placeholder.com/150")
-            )
+            )*/
 
             Text(
                 text = beast.name,

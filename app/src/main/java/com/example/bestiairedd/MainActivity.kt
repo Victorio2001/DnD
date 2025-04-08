@@ -13,6 +13,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.bestiairedd.ui.screen.beast.BeastDetailScreen
 import com.example.bestiairedd.ui.screen.beast.SearchBeastScreen
 import com.example.bestiairedd.ui.theme.BestiaireDDTheme
 
@@ -26,14 +27,15 @@ class MainActivity : ComponentActivity() {
                 Scaffold(
                     modifier = Modifier.fillMaxSize()
                 ) { innerPadding ->
-                    // On crée un NavController pour naviguer entre les composables
-                    val navController = rememberNavController()
 
-                    // On appelle notre NavHost
+
+                    val navController = rememberNavController()
                     BestiaireDDNavHost(
                         navController = navController,
                         modifier = Modifier.padding(innerPadding)
                     )
+
+
                 }
             }
         }
@@ -63,10 +65,9 @@ fun BestiaireDDNavHost(
         }
 
 
-        /*composable(route = "detail/{monsterIndex}") { backStackEntry ->
+        composable(route = "detail/{monsterIndex}") { backStackEntry ->
             val monsterIndex = backStackEntry.arguments?.getString("monsterIndex") ?: ""
-            // On appelle le composable DetailBeastScreen
-            DetailBeastScreen(monsterIndex = monsterIndex)
-        }*/
+            BeastDetailScreen(index = monsterIndex)
+        }
     }
 }

@@ -22,10 +22,10 @@ data class DndDetailResponse(
     @SerializedName("type") val type: String?,
     @SerializedName("alignment") val alignment: String?,
 
-    @SerializedName("armor_class") val armorClass: List<DndArmorClass>?,
-    @SerializedName("hit_points") val hitPoints: Int?,
-    @SerializedName("hit_dice") val hitDice: String?,
-    @SerializedName("speed") val speed: DndSpeed?,
+    //@SerializedName("armor_class") val armorClass: List<DndArmorClass>?,
+   // @SerializedName("hit_points") val hitPoints: Int?,
+    //@SerializedName("hit_dice") val hitDice: String?,
+    //@SerializedName("speed") val speed: DndSpeed?,
 
     @SerializedName("strength") val strength: Int?,
     @SerializedName("dexterity") val dexterity: Int?,
@@ -35,7 +35,7 @@ data class DndDetailResponse(
     @SerializedName("charisma") val charisma: Int?,
 
     @SerializedName("languages") val languages: String?,
-    @SerializedName("challenge_rating") val challengeRating: Int?,
+    //@SerializedName("challenge_rating") val challengeRating: Int?,
     @SerializedName("xp") val xp: Int?,
 
     @SerializedName("image") val image: String?,

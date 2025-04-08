@@ -7,6 +7,6 @@ interface IBeastRepository {
 
     suspend fun searchBeast(query: String): List<BeastShow>
 
-    //suspend fun getBeastDetailById(imdbId: String): BeastShowMore?
+    suspend fun getBeastDetailById(index: String): BeastShowMore?
 
 }

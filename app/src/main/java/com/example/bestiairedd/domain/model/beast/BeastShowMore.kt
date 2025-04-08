@@ -8,11 +8,11 @@ data class BeastShowMore (
     val type: String,
     val alignment: String,
 
-    val armor_class: List<ArmorClass>,
+    //val armor_class: List<ArmorClass>,
 
-    val hit_points: Int,
-    val hit_dice: String?,
-    val speed: Speed,
+    //val hit_points: Int,
+    //val hit_dice: String?,
+    //val speed: Speed,
 
     val strength: Int,
     val dexterity: Int,
@@ -22,7 +22,7 @@ data class BeastShowMore (
     val charisma: Int,
 
     val languages: String?,
-    val challenge_rating: Int,
+    //val challenge_rating: Int,
     val xp: Int?,
 
     //!  Image
