@@ -32,13 +32,20 @@ fun BeastItem(
         onClick = onClick,
         modifier = modifier
             .fillMaxWidth()
+            .height(90.dp)
+            .requiredHeight(90.dp)
             .padding(8.dp),
+
         shape = RectangleShape, // ? ou RoundedCornerShape(8.dp)
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
     ) {
 
         Column(
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxSize()
+                .fillMaxHeight(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
 
             /*AsyncImage(
@@ -53,6 +60,7 @@ fun BeastItem(
             Text(
                 text = beast.name,
                 style = MaterialTheme.typography.titleMedium,
+
                 modifier = Modifier
                     .padding(8.dp)
                     .fillMaxWidth()

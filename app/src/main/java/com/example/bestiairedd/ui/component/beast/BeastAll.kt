@@ -1,7 +1,11 @@
 package com.example.bestiairedd.ui.component.beast
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Divider
 import androidx.compose.runtime.Composable
@@ -9,6 +13,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.example.bestiairedd.domain.model.beast.BeastShow
 
 
@@ -21,18 +26,34 @@ fun BeastAll(
     val listState = rememberLazyListState()
 
     // ! LazyColumn permet d’afficher de graandes listes
-    LazyColumn(
-        state = listState,
+//    LazyColumn(
+//        state = listState,
+//        modifier = modifier
+//    ) {
+//        items(Beasts) { beast ->
+//            BeastItem(
+//                beast = beast,
+//                onClick = {
+//                    onMovieClick(beast.index)
+//                }
+//            )
+//            Divider(modifier = Modifier.fillMaxWidth())
+//        }
+//    }
+
+    LazyVerticalGrid(
+        columns = GridCells.Fixed(3),
+        verticalArrangement = Arrangement.spacedBy(4.dp),
+        horizontalArrangement = Arrangement.spacedBy(4.dp),
         modifier = modifier
     ) {
-        items(Beasts) { beast ->
+        items(Beasts) { x ->
             BeastItem(
-                beast = beast,
+                beast = x,
                 onClick = {
-                    onMovieClick(beast.index)
+                    onMovieClick(x.index)
                 }
             )
-            Divider(modifier = Modifier.fillMaxWidth())
         }
     }
 }
